@@ -1,0 +1,10 @@
+
+**/build*
+**/build/
+*.o
+**/moc_*
+**/ui_*
+**/Makefile
+
+**/.qmake.stash
+**/gateway.pro.user*

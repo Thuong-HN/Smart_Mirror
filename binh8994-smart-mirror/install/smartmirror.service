@@ -1,0 +1,18 @@
+# /etc/systemd/system/smartmirror.service
+
+[Unit]
+Description=Smart Mirror Service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=pi
+Environment="DISPLAY=:0"
+ExecStart=/home/pi/gateway/gateway
+ExecStartPost=/home/pi/gateway/uncompress.sh
+
+[Install]
+WantedBy=multi-user.target
